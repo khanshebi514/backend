@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name'); 
             $table->text('description'); 
             $table->decimal('price', 8, 2); 
-            $table->integer('quantity');
-            $table->string('sku')->unique(); 
+            $table->integer('quantity')->nullable();
+            $table->string('sku')->unique()->nullable(); 
             $table->string('image')->nullable(); 
             $table->enum('category', ['men', 'women', 'kids'])->nullable();
             $table->boolean('is_active')->default(true); 
